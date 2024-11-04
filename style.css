@@ -1,0 +1,265 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.game-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 1200px;
+    height: 750px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: grey grey gray gray;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+.controller__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 600px;
+    position: relative;
+}
+
+.d-pad {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left center right"
+        ". down .";
+    gap: 5px;
+    width: 160px;
+    height: 180px;
+    position: relative;
+}
+
+.d-pad__button {
+    background-color: rgb(71, 65, 77);
+    color: goldenrod;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 darkslateblue;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.d-pad__button:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 darkslateblue;
+}
+
+.d-pad__button.up {
+    grid-area: up;
+    width: 30px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.d-pad__button.down {
+    grid-area: down;
+    width: 30px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.d-pad__button.left {
+    grid-area: left;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.d-pad__button.right {
+    grid-area: right;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.d-pad__button.center {
+    grid-area: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(71, 65, 77);
+    border-radius: 5px;
+}
+
+.controller__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 700px;
+    gap: 10px;
+}
+
+.controller__up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 80px;
+}
+
+.speaker__left {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 80px;
+    height: 15px;
+    color: blueviolet;
+    font-size: 30px;
+}
+
+.button__on {
+    background-color: blueviolet;
+    color: goldenrod;
+    border-radius: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.light__source {
+    background-color: rgb(0, 0, 0);
+    border-style: ridge;
+    border-width: 5px;
+    border-color: blueviolet blueviolet blueviolet blueviolet;
+    border-radius: 5px;
+    border-radius: 10px;
+    width: 45px;
+    height: 10px;
+}
+
+.button__off {
+    background-color: blueviolet;
+    color: goldenrod;
+    border-radius: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.speaker__right {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 80px;
+    height: 15px;
+    color: blueviolet;
+    font-size: 30px;
+}
+
+.controller__mid {
+    background-color: rgb(2, 2, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: blueviolet blueviolet blueviolet blueviolet;
+    border-radius: 5px;
+    color: white;
+}
+
+.controller__down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 50px;
+}
+
+.button__start {
+    background-color: blueviolet;
+    color: goldenrod;
+    border-radius: 10px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.console__phrase {
+    background-color: goldenrod;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: goldenrod goldenrod goldenrod gold;
+    border-radius: 5px;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+}
+
+.phrase_h1 {
+    font-family: fantasy;
+    font-size: 12px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6),
+                 -1px -1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.phrase__p1 {
+    font-size: 12px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6),
+                 -1px -1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.button__option {
+    background-color: blueviolet;
+    color: goldenrod;
+    border-radius: 10px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.controller__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 180px;
+    height: 600px;
+}
+
+.button__num-7 {
+    background-color: rgb(71, 65, 77);
+    color: goldenrod;
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.button__num-8 {
+    background-color: rgb(71, 65, 77);
+    color: goldenrod;
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.button__num-9 {
+    background-color: rgb(71, 65, 77);
+    color: goldenrod;
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;

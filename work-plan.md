@@ -21,6 +21,7 @@ Mata djuret
 Leka med djuret
 Sova
 Varje knapp ska trigga en specifik händelse och uppdatera djurets status.
+
 Steg 3: Implementera statusindikatorer
 Variabler för att hålla reda på husdjurets status:
 Hunger
