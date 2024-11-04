@@ -20,7 +20,7 @@ body {
     border-radius: 50px;
     gap: 10px;
 }
-
+/* Vänstra delen av kontrollen */
 .controller__left {
     display: flex;
     justify-content: center;
@@ -101,7 +101,7 @@ body {
     height: 700px;
     gap: 10px;
 }
-
+/* Översta delen av kontrollen */
 .controller__up {
     display: flex;
     justify-content: center;
@@ -134,12 +134,20 @@ body {
 .light__source {
     background-color: rgb(0, 0, 0);
     border-style: ridge;
-    border-width: 5px;
-    border-color: blueviolet blueviolet blueviolet blueviolet;
-    border-radius: 5px;
+    border-width: 2px;
+    border-color: blueviolet;
     border-radius: 10px;
     width: 45px;
     height: 10px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.light__source.active {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.5),
+        0 0 20px rgba(255, 0, 0, 0.6),
+        0 0 40px rgba(255, 0, 0, 0.8);
 }
 
 .button__off {
@@ -161,9 +169,9 @@ body {
     color: blueviolet;
     font-size: 30px;
 }
-
+/* Skärm-delen av kontrollen */
 .controller__mid {
-    background-color: rgb(2, 2, 36);
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +183,7 @@ body {
     border-radius: 5px;
     color: white;
 }
-
+/* Nedersta delen av kontrollen */
 .controller__down {
     display: flex;
     justify-content: center;
@@ -227,7 +235,7 @@ body {
     width: 80px;
     cursor: pointer;
 }
-
+/* Högra del av kontrollen */
 .controller__right {
     display: flex;
     justify-content: center;
@@ -263,3 +271,4 @@ body {
     width: 70px;
     height: 70px;
     cursor: pointer;
+}
