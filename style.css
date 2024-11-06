@@ -185,6 +185,7 @@ body {
 }
 
 .game__screen {
+    position: relative;
     background-color: rgb(128, 122, 122);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -201,12 +202,14 @@ body {
     "bed . . . ."
     ". . m-c . ."
     ". table table . ."
-    ". . . . .";
+    ". . . s-b s-b";
 }
 
 /* Main-Character */
 .main-character {
     grid-area: m-c;
+    position: absolute;
+    transition: transform 1s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,7 +233,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    background-color: #ffc0cb;
     border-radius: 20px;
     width: 50px;
     height: 50px;
@@ -254,17 +257,60 @@ body {
     height: 25px;
 }
 
-/* Cell-decor */
+/* Karakrärs meny */
+.status-bar {
+    grid-area: s-b;
+    background-color: rgba(56, 56, 56, 0.26);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 97%;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.meter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meter label {
+    color: white;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.bar {
+    width: 20px;
+    height: 60px;
+    background-color: #ff0000;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    width: 100%;
+    height: 50%;
+    background-color: #00ff08;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Cell-Inredning */
 .bed {
     grid-area: bed;
-    background-color: rgb(78, 47, 4);
+    background-color: orange;
     display: flex;
     flex-direction: column;   
     justify-content: flex-start;
     align-items: center;
-    width: 100%;               
-    height: 100%;              
-    box-sizing: border-box;    
+    width: 90%;               
+    height: 90%;              
+    box-sizing: border-box;
+    margin-left: 10px;    
 }
 
 .pillow {
@@ -299,7 +345,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;               
-    height: 100%;              
+    height: 80%;              
     box-sizing: border-box;    
 }
 
@@ -392,3 +438,18 @@ body {
     height: 70px;
     cursor: pointer;
 }
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.position-x1 { grid-area: 1 / 2; }
+.position-x2 { grid-area: 2 / 2; }
+.position-x3 { grid-area: 3 / 2; }
+.position-x4 { grid-area: 3 / 3; }
+.position-x5 { grid-area: 3 / 4; }
