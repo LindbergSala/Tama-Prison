@@ -61,6 +61,9 @@ Loopar och funktioner för interaktiva och tidsbaserade förändringar.
 DOM-manipulation och eventhantering för att uppdatera status på sidan.
 Local Storage för att spara och ladda husdjurets status.
 setInterval och setTimeout för att hantera tidsbaserade händelser.
+
+
+
 Arbetsplanens struktur
 Planera och skissa ut designen och spelreglerna.
 Skapa grundläggande HTML och CSS för husdjuret och statusindikatorerna.

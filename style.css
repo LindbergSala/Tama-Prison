@@ -171,7 +171,7 @@ body {
 }
 /* Skärm-delen av kontrollen */
 .controller__mid {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(38, 38, 38);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +183,126 @@ body {
     border-radius: 5px;
     color: white;
 }
+
+.game__screen {
+    background-color: rgb(128, 122, 122);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    width: 790px;
+    height: 570px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-areas:
+    "bed  . bookcase . ."
+    "bed . . . ."
+    ". . m-c . ."
+    ". table table . ."
+    ". . . . .";
+}
+
+/* Main-Character */
+.main-character {
+    grid-area: m-c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-character__body {
+    position: relative;
+    z-index: 2;
+    background-color: orange;
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+}
+
+.main-character__head {
+    position: absolute;
+    z-index: 3;
+    top: -5px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.main-character__l-hand {
+    position: relative;
+    left: 10px;
+    background-color: pink;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.main-character__r-hand {
+    position: relative;
+    right: 10px;
+    background-color: pink;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+/* Cell-decor */
+.bed {
+    grid-area: bed;
+    background-color: rgb(78, 47, 4);
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;               
+    height: 100%;              
+    box-sizing: border-box;    
+}
+
+.pillow {
+    grid-area: pillow;
+    background-color: rgb(255, 249, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;               
+    height: 20%;              
+    box-sizing: border-box;    
+}
+
+.table {
+    grid-area: table;
+    background-color: rgb(198, 198, 191);
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;               
+    height: 100%;              
+    box-sizing: border-box;    
+}
+
+.bookcase {
+    grid-area: bookcase;
+    background-color: rgb(78, 47, 4);
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;               
+    height: 100%;              
+    box-sizing: border-box;    
+}
+
 /* Nedersta delen av kontrollen */
 .controller__down {
     display: flex;
