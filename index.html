@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pixel Pet</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="game-frame">
+        <!-- Controller Left -->
         <div class="controller__left">
             <div class="d-pad">
                 <button class="d-pad__button up">W</button>
@@ -18,7 +19,8 @@
                 <button class="d-pad__button down">S</button>
             </div>
         </div>
-        
+
+        <!-- Main Controller -->
         <div class="controller__main">
             <div class="controller__up">
                 <div class="speaker__left">IIIIIIII</div>
@@ -29,64 +31,71 @@
             </div>
 
             <div class="controller__mid">
-                <div class="game__screen">
-
+                <div class="game__screen hidden">
+                    
+                    <!-- Status Bar -->
                     <div class="status-bar">
-                        <div class="meter">
+                        <div class="meter" id="mat">
                             <label>MAT</label>
                             <div class="bar">
                                 <div class="fill" id="mat-fill"></div>
                             </div>
                         </div>
-                        <div class="meter">
+                        <div class="meter" id="energi">
                             <label>ENERGI</label>
                             <div class="bar">
                                 <div class="fill" id="energi-fill"></div>
                             </div>
                         </div>
-                        <div class="meter">
+                        <div class="meter" id="gladje">
                             <label>GLÄDJE</label>
                             <div class="bar">
                                 <div class="fill" id="gladje-fill"></div>
                             </div>
                         </div>
                     </div>
-                    
 
+                    <!-- Main Character -->
                     <div class="main-character">
                         <div class="main-character__l-hand"></div>
                         <div class="main-character__body">
                             <div class="main-character__head"></div>
                         </div>
                         <div class="main-character__r-hand"></div>
-                      </div>
+                    </div>
 
-                      <div class="bed">
+                    <!-- Background Objects -->
+                    <div class="bed">
                         <div class="pillow">kudde</div>
-                      </div>
-
-                      <div class="table"></div>
-
-                      <div class="bookcase"></div>
-
+                    </div>
+                    <div class="table"></div>
+                    <div class="bookcase"></div>
                 </div>
             </div>
 
+            <!-- Controller Down -->
             <div class="controller__down">
                 <button class="button__start">START</button>
                 <div class="console__phrase">
-                    <h1 class="phrase_h1">-: 
-                        P i x e l P a d :-</h1>
-                    <p class="phrase__p1 ">Fun in Hand, Across the Land!</p>
+                    <h1 class="phrase_h1">-: Pixel Pad :-</h1>
+                    <p class="phrase__p1">Fun in Hand, Across the Land!</p>
                 </div>
                 <button class="button__option">OPTION</button>
             </div>
         </div>
 
+        <!-- Controller Right -->
         <div class="controller__right">
             <button class="button__num-7">Num-7</button>
             <button class="button__num-8">Num-8</button>
             <button class="button__num-9">Num-9</button>
+        </div>
+
+        <!-- Escape Message -->
+        <div class="escape-message hidden">
+            <h2>Rymningsförsök!</h2>
+            <button class="catch__btn">Fånga in rymmlingen</button>
+            <button class="free__btn">Befria rymmlingen</button>
         </div>
     </div>
 </body>

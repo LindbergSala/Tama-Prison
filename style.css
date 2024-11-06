@@ -439,17 +439,29 @@ body {
     cursor: pointer;
 }
 
+.escape-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
 .hidden {
     opacity: 0;
     transition: opacity 1s ease;
 }
+
 .visible {
     opacity: 1;
     transition: opacity 1s ease;
 }
 
-.position-x1 { grid-area: 1 / 2; }
-.position-x2 { grid-area: 2 / 2; }
-.position-x3 { grid-area: 3 / 2; }
-.position-x4 { grid-area: 3 / 3; }
-.position-x5 { grid-area: 3 / 4; }
