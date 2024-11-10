@@ -94,13 +94,10 @@ let currentMovementIndex = 0;
 
 // Funktion för att flytta karaktären till nästa position
 function moveCharacterAutomatically() {
-    if (isGameOn) { 
-        const { x, y } = movementPositions[currentMovementIndex];
-        mainCharacter.style.transform = `translate(${x}, ${y})`;
-
-    
-        currentMovementIndex = (currentMovementIndex + 1) % movementPositions.length;
-    }
+    if (!isGameOn) return; // Lägg till detta för att undvika onödig körning
+    const { x, y } = movementPositions[currentMovementIndex];
+    mainCharacter.style.transform = `translate(${x}, ${y})`;
+    currentMovementIndex = (currentMovementIndex + 1) % movementPositions.length;
 }
 
 setInterval(moveCharacterAutomatically, 2000);

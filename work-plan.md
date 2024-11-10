@@ -1,14 +1,4 @@
-## 1. Projektuppstart och grundstruktur
-Uppgift: Skapa ett virtuellt husdjur som kan matas, lekas med och sova.
-Presentation: Fokus på resultatet snarare än koden.
-Deadline: Presentation på fredag.
-
-## 2. Planeringsfaser
-Val av arbetssätt: Individuellt, i grupp, eller med en ny grupp.
-Koncept: Bestäm husdjurets design (t.ex., enkel fyrkant eller rund blob).
-Beslut kring utseendeförändring: Färgändringar baserat på status (grön -> gul -> röd).
-
-3. Steg-för-steg arbetsplan
+1. Steg-för-steg arbetsplan
 
 Steg 0: Starta programet.
 Alla JavaScript funktioner ska vara avstängda fram tills dess att spelaren trycker på on knappen, förutom en funktion. Allt på <div class="game__screen"> ska vara dolt. När spelaren tryckt på <button class="button__on">ON</button> så ska allt på <div class="game__screen"> tona fram och spelet ska vara igång. Om spelaren trycker på <button class="button__off">OFF</button> så ska allt på <div class="game__screen"> tona bort och inte synas igen. 
